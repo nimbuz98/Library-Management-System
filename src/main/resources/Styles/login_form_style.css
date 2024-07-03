@@ -1,11 +1,13 @@
  #subAnchorPane01{
      -fx-background-color: #3C3939;
  }
- #subAnchorPane02{
+ #subAnchorPane02,#SignUpMainPane{
      -fx-background-color: #FAF3F3;
  }
  #mainSubAnchorPane{
+     -fx-border-color: black ;
      -fx-border-width: 1px;
+     -fx-effect: dropshadow(three-pass-box, rgba(101, 95, 95, 0.8),5,0.5,2,2);
  }
  .round-corner{
      -fx-border-radius: 7px;
