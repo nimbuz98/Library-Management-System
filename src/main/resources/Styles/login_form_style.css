@@ -1,0 +1,27 @@
+ #subAnchorPane01{
+     -fx-background-color: #3C3939;
+ }
+ #subAnchorPane02{
+     -fx-background-color: #FAF3F3;
+ }
+ #mainSubAnchorPane{
+     -fx-border-width: 1px;
+ }
+ .round-corner{
+     -fx-border-radius: 7px;
+     -fx-background-radius: 7px;
+ }
+ .round-button-black{
+     -fx-border-radius: 20px;
+     -fx-background-radius: 20px;
+     -fx-background-color: #383839;
+     -fx-text-fill: white;
+     -fx-font-style: bold;
+     -fx-font-weight: 5px;
+ }
+ .round-button-black:hover{
+     -fx-effect: dropshadow(three-pass-box, rgba(156, 256, 212, 0.93),10,0.8,0,0);
+ }
+ .round-button-black:pressed{
+     -fx-effect: dropshadow(three-pass-box, rgba(18, 81, 200, 0.93),10,0.8,0,0);
+ }
