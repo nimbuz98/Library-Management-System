@@ -7,30 +7,37 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="717.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.nimbuzLearning.controller.sub.ManageBookFormController">
    <children>
-      <TextField layoutX="90.0" layoutY="157.0" prefHeight="25.0" prefWidth="200.0" promptText="ISBN" />
-      <TextField layoutX="90.0" layoutY="54.0" prefHeight="25.0" prefWidth="200.0" promptText="Book ID" />
-      <TextField layoutX="91.0" layoutY="105.0" prefHeight="25.0" prefWidth="200.0" promptText="Book Name" />
-      <TextField layoutX="90.0" layoutY="209.0" prefHeight="25.0" prefWidth="200.0" promptText="Price" />
-      <ComboBox layoutX="90.0" layoutY="262.0" prefHeight="25.0" prefWidth="200.0" promptText="Select Publisher" />
-      <ComboBox layoutX="90.0" layoutY="308.0" prefHeight="25.0" prefWidth="200.0" promptText="Select Main Category" />
-      <TableView layoutX="93.0" layoutY="361.0" prefHeight="200.0" prefWidth="200.0">
+      <TextField fx:id="txtIsbn" layoutX="90.0" layoutY="157.0" prefHeight="25.0" prefWidth="200.0" promptText="ISBN" />
+      <TextField fx:id="txtBookId" layoutX="90.0" layoutY="54.0" onAction="#bookIdOnAction" prefHeight="25.0" prefWidth="200.0" promptText="Book ID" />
+      <TextField fx:id="txtBookName" layoutX="91.0" layoutY="105.0" prefHeight="25.0" prefWidth="200.0" promptText="Book Name" />
+      <TextField fx:id="txtPrice" layoutX="90.0" layoutY="209.0" prefHeight="25.0" prefWidth="200.0" promptText="Price" />
+      <ComboBox fx:id="cmbPublisher" layoutX="90.0" layoutY="249.0" prefHeight="25.0" prefWidth="200.0" promptText="Select Publisher" />
+      <ComboBox fx:id="cmbMainCategory" layoutX="90.0" layoutY="288.0" prefHeight="25.0" prefWidth="200.0" promptText="Select Main Category" />
+      <TableView fx:id="tblSubCategories" layoutX="89.0" layoutY="329.0" prefHeight="117.0" prefWidth="200.0">
         <columns>
-          <TableColumn prefWidth="115.66667175292969" text="Category Name" />
-          <TableColumn prefWidth="84.33332824707031" text="Option" />
+          <TableColumn fx:id="colCategoryName" prefWidth="115.66667175292969" text="Category Name" />
+          <TableColumn fx:id="colOption" prefWidth="84.33332824707031" text="Option" />
         </columns>
       </TableView>
-      <Button layoutX="101.0" layoutY="575.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Save" />
-      <Button layoutX="204.0" layoutY="574.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Update" />
-      <Button layoutX="101.0" layoutY="620.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Delete" />
-      <Button layoutX="203.0" layoutY="619.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Clear" />
+      <Button fx:id="btnSave" layoutX="41.0" layoutY="674.0" mnemonicParsing="false" onAction="#btnSaveOnaction" prefHeight="25.0" prefWidth="75.0" text="Save" />
+      <Button layoutX="142.0" layoutY="674.0" mnemonicParsing="false" onAction="#btnUpdateOnaction" prefHeight="25.0" prefWidth="75.0" text="Update" />
+      <Button layoutX="249.0" layoutY="674.0" mnemonicParsing="false" onAction="#btnDeleteOnaction" prefHeight="25.0" prefWidth="75.0" text="Delete" />
+      <Button layoutX="354.0" layoutY="674.0" mnemonicParsing="false" onAction="#btnClearOnaction" prefHeight="25.0" prefWidth="75.0" text="Clear" />
       <TableView layoutX="386.0" layoutY="51.0" prefHeight="593.0" prefWidth="569.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Book ID" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="colBookId" prefWidth="172.33331298828125" text="Book ID" />
+          <TableColumn fx:id="colBookName" prefWidth="167.66668701171875" text="Book Name" />
+            <TableColumn fx:id="colIsbn" prefWidth="121.66668701171875" text="ISBN" />
+            <TableColumn fx:id="colPrice" prefWidth="107.0" text="Price" />
         </columns>
+      </TableView>
+      <TableView fx:id="tblAuthors" layoutX="91.0" layoutY="464.0" prefHeight="171.0" prefWidth="197.0">
+         <columns>
+            <TableColumn fx:id="colAuthorName" prefWidth="98.66668701171875" text="Author Name" />
+            <TableColumn fx:id="colAuthorOption" minWidth="0.0" prefWidth="121.33331298828125" text="Option" />
+         </columns>
       </TableView>
    </children>
 </AnchorPane>
